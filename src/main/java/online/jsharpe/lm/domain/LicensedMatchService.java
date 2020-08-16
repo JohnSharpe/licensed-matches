@@ -1,6 +1,6 @@
 package online.jsharpe.lm.domain;
 
-import online.jsharpe.lm.domain.repositories.licensedmatch.LicensedMatchRepository;
+import online.jsharpe.lm.domain.repositories.LicensedMatchRepository;
 import online.jsharpe.lm.domain.representations.MatchRepresentation;
 import online.jsharpe.lm.domain.summary.SummaryGenerator;
 
@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class MatchService {
+public class LicensedMatchService {
 
     private final SummaryGenerator summaryGenerator;
     private final LicensedMatchRepository licensedMatchRepository;
 
-    public MatchService(SummaryGenerator summaryGenerator,
-                        LicensedMatchRepository licensedMatchRepository) {
+    public LicensedMatchService(SummaryGenerator summaryGenerator,
+                                LicensedMatchRepository licensedMatchRepository) {
         this.summaryGenerator = summaryGenerator;
         this.licensedMatchRepository = licensedMatchRepository;
     }

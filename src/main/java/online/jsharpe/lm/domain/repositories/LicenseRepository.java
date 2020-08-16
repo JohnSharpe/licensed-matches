@@ -1,4 +1,4 @@
-package online.jsharpe.lm.domain.repositories.licenses;
+package online.jsharpe.lm.domain.repositories;
 
 import online.jsharpe.lm.domain.models.License;
 

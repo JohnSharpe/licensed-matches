@@ -1,9 +1,10 @@
-package online.jsharpe.lm.domain.repositories.licensedmatch;
+package online.jsharpe.lm.application.repositories;
 
+import online.jsharpe.lm.application.repositories.LocalLicensedMatchRepository;
 import online.jsharpe.lm.domain.models.License;
 import online.jsharpe.lm.domain.models.Match;
-import online.jsharpe.lm.domain.repositories.licenses.TestLicenseRepository;
-import online.jsharpe.lm.domain.repositories.matches.TestMatchRepository;
+import online.jsharpe.lm.domain.repositories.TestLicenseRepository;
+import online.jsharpe.lm.domain.repositories.TestMatchRepository;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

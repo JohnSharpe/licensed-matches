@@ -1,7 +1,7 @@
 package online.jsharpe.lm.domain;
 
 import online.jsharpe.lm.domain.models.Match;
-import online.jsharpe.lm.domain.repositories.licensedmatch.TestLicensedMatchRepository;
+import online.jsharpe.lm.domain.repositories.TestLicensedMatchRepository;
 import online.jsharpe.lm.domain.representations.MatchRepresentation;
 import online.jsharpe.lm.domain.summary.SummaryGenerator;
 import online.jsharpe.lm.domain.summary.clock.SystemClock;
@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-class MatchServiceTest {
+class LicensedMatchServiceTest {
 
     @Test
     void testNoMatches() {
@@ -22,10 +22,10 @@ class MatchServiceTest {
 
         final SummaryGenerator summaryGenerator = new SummaryGenerator(new SystemClock());
         final TestLicensedMatchRepository testLicensedMatchRepository = new TestLicensedMatchRepository(Collections.emptyList());
-        final MatchService matchService = new MatchService(summaryGenerator, testLicensedMatchRepository);
+        final LicensedMatchService licensedMatchService = new LicensedMatchService(summaryGenerator, testLicensedMatchRepository);
 
         // When
-        final List<MatchRepresentation> matches = matchService.getMatchesForCustomer(customerId, "AvB");
+        final List<MatchRepresentation> matches = licensedMatchService.getMatchesForCustomer(customerId, "AvB");
 
         // Then
         Assertions.assertNotNull(matches);
@@ -47,10 +47,10 @@ class MatchServiceTest {
         final TestLicensedMatchRepository testLicensedMatchRepository = new TestLicensedMatchRepository(
                 Collections.singletonList(new Match(matchId, UUID.randomUUID(), startDate, playerA, playerB))
         );
-        final MatchService matchService = new MatchService(summaryGenerator, testLicensedMatchRepository);
+        final LicensedMatchService licensedMatchService = new LicensedMatchService(summaryGenerator, testLicensedMatchRepository);
 
         // When
-        final List<MatchRepresentation> matches = matchService.getMatchesForCustomer(customerId, "AvB");
+        final List<MatchRepresentation> matches = licensedMatchService.getMatchesForCustomer(customerId, "AvB");
 
         // Then
         Assertions.assertNotNull(matches);
@@ -80,10 +80,10 @@ class MatchServiceTest {
         final TestLicensedMatchRepository testLicensedMatchRepository = new TestLicensedMatchRepository(
                 Arrays.asList(a, b, c)
         );
-        final MatchService matchService = new MatchService(summaryGenerator, testLicensedMatchRepository);
+        final LicensedMatchService licensedMatchService = new LicensedMatchService(summaryGenerator, testLicensedMatchRepository);
 
         // When
-        final List<MatchRepresentation> matches = matchService.getMatchesForCustomer(customerId, "AvB");
+        final List<MatchRepresentation> matches = licensedMatchService.getMatchesForCustomer(customerId, "AvB");
 
         // Then
         Assertions.assertNotNull(matches);

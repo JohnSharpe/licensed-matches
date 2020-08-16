@@ -1,9 +1,10 @@
-package online.jsharpe.lm.domain.repositories.licensedmatch;
+package online.jsharpe.lm.application.repositories;
 
 import online.jsharpe.lm.domain.models.License;
 import online.jsharpe.lm.domain.models.Match;
-import online.jsharpe.lm.domain.repositories.licenses.LicenseRepository;
-import online.jsharpe.lm.domain.repositories.matches.MatchRepository;
+import online.jsharpe.lm.domain.repositories.LicensedMatchRepository;
+import online.jsharpe.lm.domain.repositories.LicenseRepository;
+import online.jsharpe.lm.domain.repositories.MatchRepository;
 
 import java.util.List;
 import java.util.UUID;

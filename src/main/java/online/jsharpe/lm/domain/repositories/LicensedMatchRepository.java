@@ -1,4 +1,4 @@
-package online.jsharpe.lm.domain.repositories.licensedmatch;
+package online.jsharpe.lm.domain.repositories;
 
 import online.jsharpe.lm.domain.models.Match;
 

@@ -1,6 +1,7 @@
-package online.jsharpe.lm.domain.repositories.licenses;
+package online.jsharpe.lm.domain.repositories;
 
 import online.jsharpe.lm.domain.models.License;
+import online.jsharpe.lm.domain.repositories.LicenseRepository;
 
 import java.util.List;
 import java.util.UUID;

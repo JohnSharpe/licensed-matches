@@ -85,6 +85,9 @@ shrink down the number of steps. Hopefully, we will hit a level of abstraction w
 could comfortably be 'dropped in' to the system, but it would be too time-consuming to
 actually develop.
 
+There are many aspects of data integrity that would have to be maintained by the Repository
+implementations.
+
 - Parallelism (TODO only include if we find time to implement entity creation endpoints)
 
 It will be assumed that only one instance of this will run and that the client understands

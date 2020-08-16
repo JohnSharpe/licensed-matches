@@ -1,6 +1,7 @@
-package online.jsharpe.lm.domain.repositories.matches;
+package online.jsharpe.lm.application.repositories;
 
 import online.jsharpe.lm.domain.models.Match;
+import online.jsharpe.lm.domain.repositories.MatchRepository;
 
 import java.util.ArrayList;
 import java.util.List;
