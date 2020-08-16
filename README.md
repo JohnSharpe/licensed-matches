@@ -10,7 +10,7 @@ to run unit tests and get a jar.
 
 To run, use `java -jar <application.jar> server <config.yml>`
 
-The application runs on port 8080 and has a single GET endpoint
+The application runs on port 3000 and has a single GET endpoint
 
 `/licensed/{customerId}`
 
@@ -72,7 +72,7 @@ known matches exist for them.
 
 - Best effort
 
-The repositories will make a best-effort attempt to grab matcher for a customer. Since
+The repositories will make a best-effort attempt to grab matches for a customer. Since
 we're not fleshing out a database, it will be up to the person running the system to get the
 data right.
 
@@ -88,11 +88,11 @@ actually develop.
 There are many aspects of data integrity that would have to be maintained by the Repository
 implementations.
 
-- Parallelism (TODO only include if we find time to implement entity creation endpoints)
-
-It will be assumed that only one instance of this will run and that the client understands
-that there may be some delay before creating an entity and being able to retrieve it.
-
 - System clock
 
-It will be assumed that the system clock is 'good enough' for any time calculations. 
+It will be assumed that the system clock is 'good enough' for any time calculations.
+
+### If I had more time
+
+I would actually implement methods to get data into the system and possibly models for various
+entities like Customer, Tournament and Player.

@@ -5,6 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.UUID;
 
+/**
+ * This class represents a single Match as we want the user to see it.
+ * Jackson annotations mean that it can be serialised/deserialised into/from JSON
+ */
 public class MatchRepresentation {
 
     private final UUID matchId;

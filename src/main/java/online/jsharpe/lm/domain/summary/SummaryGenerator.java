@@ -3,6 +3,10 @@ package online.jsharpe.lm.domain.summary;
 import online.jsharpe.lm.domain.models.Match;
 import online.jsharpe.lm.domain.summary.clock.Clock;
 
+/**
+ * Contains behaviour to generate a summary per-match in a specified way.
+ * Adding more 'message types' would involve some rework.
+ */
 public class SummaryGenerator {
 
     private static final String AVB_TIME_TYPE = "AvBTime";
@@ -18,6 +22,13 @@ public class SummaryGenerator {
         this.clock = clock;
     }
 
+    /**
+     * Generate a summary string for a single match as specified by the user
+     *
+     * @param match       the match to summarize
+     * @param summaryType a flag for the format to use
+     * @return a formatted, human-readable string summarizing the given match
+     */
     public String generateSummary(Match match, String summaryType) {
         if (AVB_TIME_TYPE.equals(summaryType)) {
 
